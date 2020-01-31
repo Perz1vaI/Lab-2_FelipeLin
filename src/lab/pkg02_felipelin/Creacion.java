@@ -41,6 +41,10 @@ public class Creacion {
     private int dgMago = rand.nextInt(5) + 6;
     private int dgPicaro = rand.nextInt(10) + 16;
 
+    public Creacion() {
+
+    }
+
     public Creacion(String clase, String raza, String nombre, double estatura, double peso, int edad, String descripcion, String Nacionalidad) {
         this.clase = clase;
         this.raza = raza;
@@ -243,8 +247,6 @@ public class Creacion {
     public void setDgPicaro(int dgPicaro) {
         this.dgPicaro = dgPicaro;
     }
-    
-    
 
     @Override
     public String toString() {

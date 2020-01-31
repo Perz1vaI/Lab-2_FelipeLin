@@ -1,14 +1,21 @@
 package lab.pkg02_felipelin;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Lab02_FelipeLin {
 
     public static void main(String[] args) {
         int menu;
+        Random rand = new Random();
         Scanner leer = new Scanner(System.in);
         ArrayList<Creacion> lista = new ArrayList();
+        Creacion atri = new Creacion();
+        lista.add(new Creacion("clerigo", "humano", "David", 1.75, 42.3, 19, "Queria ser mago cuando era un nene chiquito, pero se dio cuenta que no sirve", "norfair"));
+        lista.add(new Creacion("barbaro", "mediano", "Roberto", 1.55, 69, 18, "Un joven barbaro con sueños grandes de ser un heroe, pero la realidad es de que es un simple hombre promedio", "brinstar"));
+        lista.add(new Creacion("mago", "enano", "Ian", 1.25, 30.3, 80, "Un mago con mucha experiencia y un aventurero veterano", "maridia"));
+        lista.add(new Creacion("picaro", "elfo", "Yoshikage Kira", 1.89, 72, 33, "My name is Yoshikage Kira. I'm 33 years old. My house is in the northeast section of Morioh, where all the villas are, and I am not married. I work as an employee for the Kame Yu department stores, and I get home every day by 8 PM at the latest. I don't smoke, but I occasionally drink. I'm in bed by 11 PM, and make sure I get eight hours of sleep, no matter what.", "zebes"));
 
         System.out.println("1. Creacion de personaje \n2. Modificar personaje \n3. Ver atributos de un personaje"
                 + "\n4. Eliminar Personaje \n5. Combate \n6. Salida");
@@ -133,12 +140,142 @@ public class Lab02_FelipeLin {
                     break;
                 }
                 case 5: {
-
-                    int pos;
+                    // La preparacion para poner su jugador
+                    int pos, cs = 0, ac = 0, dg = 0, hp = 0;
                     System.out.println("Ingrese la posicion de su personaje para jugar");
                     pos = leer.nextInt();
-                    if (((Creacion) lista.get(pos)).getClase() == "clerigo") {
+                    if (((Creacion) lista.get(pos)).getClase().contains("clerigo")) {
+                        cs = atri.getCsClerigo();
+                        ac = atri.getAcClerigo();
+                        dg = atri.getDgClerigo();
+                        System.out.println("sada" + cs + "afasf" + ac + "fas" + dg);
 
+                    } else if (((Creacion) lista.get(pos)).getClase().contains("barbaro")) {
+                        cs = atri.getCsBarbaro();
+                        ac = atri.getAcBarbaro();
+                        dg = atri.getDgBarbaro();
+                    } else if (((Creacion) lista.get(pos)).getClase().contains("picaro")) {
+                        cs = atri.getCsPicaro();
+                        ac = atri.getAcPicaro();
+                        dg = atri.getDgPicaro();
+                    } else if (((Creacion) lista.get(pos)).getClase().contains("mago")) {
+                        cs = atri.getCsMago();
+                        ac = atri.getAcMago();
+                        dg = atri.getDgMago();
+                    }
+
+                    if (((Creacion) lista.get(pos)).getClase().contains("mediano")) {
+                        hp = atri.getHpMediano();
+                        System.out.println("mediano" + hp);
+                    } else if (((Creacion) lista.get(pos)).getClase().contains("enano")) {
+                        hp = atri.getHpEnano();
+                        System.out.println("enano" + hp);
+
+                    } else if (((Creacion) lista.get(pos)).getClase().contains("elfo")) {
+                        hp = atri.getHpElfo();
+                        System.out.println("mediano" + hp);
+
+                    } else if (((Creacion) lista.get(pos)).getClase().contains("humano")) {
+                        hp = atri.getHpHumano();
+                        System.out.println("hphphphphp" + hp);
+
+                    }
+
+                    // La preparacion de la computadora
+                    int pos2, cs2 = 0, ac2 = 0, dg2 = 0, hp2 = 0;
+                    System.out.println("Ingrese la posicion de su personaje para jugar");
+                    pos2 = leer.nextInt();
+                    if (((Creacion) lista.get(pos2)).getClase().contains("clerigo")) {
+                        cs2 = atri.getCsClerigo();
+                        ac2 = atri.getAcClerigo();
+                        dg2 = atri.getDgClerigo();
+
+                    } else if (((Creacion) lista.get(pos2)).getClase().contains("barbaro")) {
+                        cs2 = atri.getCsBarbaro();
+                        ac2 = atri.getAcBarbaro();
+                        dg2 = atri.getDgBarbaro();
+                    } else if (((Creacion) lista.get(pos2)).getClase().contains("picaro")) {
+                        cs2 = atri.getCsPicaro();
+                        ac2 = atri.getAcPicaro();
+                        dg2 = atri.getDgPicaro();
+                    } else if (((Creacion) lista.get(pos2)).getClase().contains("mago")) {
+                        cs2 = atri.getCsMago();
+                        ac2 = atri.getAcMago();
+                        dg2 = atri.getDgMago();
+                    }
+
+                    if (((Creacion) lista.get(pos2)).getClase().contains("mediano")) {
+                        hp2 = atri.getHpMediano();
+                    } else if (((Creacion) lista.get(pos2)).getClase().contains("enano")) {
+                        hp2 = atri.getHpEnano();
+
+                    } else if (((Creacion) lista.get(pos2)).getClase().contains("elfo")) {
+                        hp2 = atri.getHpElfo();
+
+                    } else if (((Creacion) lista.get(pos2)).getClase().contains("humano")) {
+                        hp2 = atri.getHpHumano();
+
+                    }
+
+                    int opcion, roll, opcion2, roll2;
+                    boolean check = false;
+                    boolean check2 = false;
+                    while (hp <= 0 || hp2 <= 0) {
+                        System.out.println("------------" + ((Creacion) lista.get(pos)).getNombre() + "------------");
+                        System.out.println("1. Atacar \n2. Defender");
+                        opcion = leer.nextInt();
+                        System.out.println("Vida: " + hp);
+
+                        if (check) {
+                            ac -= 15;
+                            check = false;
+                        }
+
+                        if (opcion == 1) {
+
+                            roll = rand.nextInt(100);
+                            if (roll > ac2) {
+                                if (roll > cs) {
+                                    hp2 -= dg * 2;
+
+                                }
+                                hp2 -= dg;
+                                System.out.println("A atacado a" + ((Creacion) lista.get(pos2)).getNombre() + " por " + dg + " de daño");
+                            }
+                            System.out.println("A fallado su ataque");
+                        } else {
+                            ac += 15;
+                            check = true;
+                            System.out.println("A escodigo defender");
+                        }
+                        System.out.println("------------" + ((Creacion) lista.get(pos2)).getNombre() + "------------");
+                        System.out.println("1. Atacar \n2. Defender");
+                        opcion2 = leer.nextInt();
+                        System.out.println("Vida: " + hp2);
+
+                        if (check2) {
+                            ac2 -= 15;
+                            check2 = false;
+                        }
+
+                        if (opcion2 == 1) {
+                            roll2 = rand.nextInt(100);
+                            if (roll2 > ac) {
+                                if (roll2 > cs2) {
+                                    hp -= dg2 * 2;
+
+                                }
+                                hp -= dg2;
+                                System.out.println("A atacado a" + ((Creacion) lista.get(pos)).getNombre() + " por " + dg + " de daño");
+
+                            }
+                            System.out.println("A fallado su ataque");
+
+                        } else {
+                            ac2 += 15;
+                            check2 = true;
+                            System.out.println("A escodigo defender");
+                        }
                     }
 
                     break;
