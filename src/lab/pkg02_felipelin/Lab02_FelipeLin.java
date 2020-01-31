@@ -19,12 +19,22 @@ public class Lab02_FelipeLin {
                     System.out.println("1. Clerigo \n2. Barbaro \n3. Mago \n4. Picaro \nDebera de escribir unos de las clases dependiendo que clase quiere");
                     leer.nextLine();
                     String clase = leer.nextLine();
+                    while (!clase.contains("clerigo") && !clase.contains("barbaro") && !clase.contains("mago") && !clase.contains("picaro")) {
+                        System.out.println("Solo puede escribir las clases en minuscula o solo puede escribir esas opciones que se le dan");
+                        System.out.println("1. Clerigo \n2. Barbaro \n3. Mago \n4. Picaro \nDebera de escribir unos de las clases dependiendo que clase quiere");
+                        clase = leer.nextLine();
+                    }
 
                     System.out.println("Asigne el nombre de su personaje");
                     String nombre = leer.nextLine();
 
                     System.out.println("1. Mediano \n2. Enano \n3. Elfo \n4. Humano \nDebera de escribir unos de las razas dependiendo que raza quiere");
                     String raza = leer.nextLine();
+                    while (!raza.contains("mediano") && !raza.contains("enano") && !raza.contains("enano") && !raza.contains("elfo")) {
+                        System.out.println("Solo puede escribir las razas en minuscula o solo puede escribir esas opciones que se le dan");
+                        System.out.println("1. Mediano \n2. Enano \n3. Elfo \n4. Humano \nDebera de escribir unos de las razas dependiendo que raza quiere");
+                        raza = leer.nextLine();
+                    }
 
                     System.out.println("Ingrese estatura del personaje: ");
                     double estatura = leer.nextDouble();
@@ -41,6 +51,11 @@ public class Lab02_FelipeLin {
 
                     System.out.println("1. Norfair \n2. Brinstar \n3. Maridia \n4. Zebes \n5. Crateria \nDebera de escribir unos de las nacionalidades dependiendo que nacionalidad quiere");
                     String nacionalidad = leer.nextLine();
+                    while (!nacionalidad.contains("norfair") && !nacionalidad.contains("brinstar") && !nacionalidad.contains("maridia") && !nacionalidad.contains("zebes")) {
+                        System.out.println("Solo puede escribir las nacionalidades en minuscula o solo puede escribir esas opciones que se le dan");
+                        System.out.println("1. Norfair \n2. Brinstar \n3. Maridia \n4. Zebes \n5. Crateria \nDebera de escribir unos de las nacionalidades dependiendo que nacionalidad quiere");
+                        nacionalidad = leer.nextLine();
+                    }
 
                     lista.add(new Creacion(clase, raza, nombre, estatura, peso, edad, descripcion, nacionalidad));
 
@@ -53,6 +68,11 @@ public class Lab02_FelipeLin {
                     System.out.println("1. Clerigo \n2. Barbaro \n3. Mago \n4. Picaro \nDebera de escribir unos de las clases dependiendo que clase quiere");
                     leer.nextLine();
                     String clase = leer.nextLine();
+                    while (!clase.contains("clerigo") && !clase.contains("barbaro") && !clase.contains("mago") && !clase.contains("picaro")) {
+                        System.out.println("Solo puede escribir las clases en minuscula o solo puede escribir esas opciones que se le dan");
+                        System.out.println("1. Clerigo \n2. Barbaro \n3. Mago \n4. Picaro \nDebera de escribir unos de las clases dependiendo que clase quiere");
+                        clase = leer.nextLine();
+                    }
                     ((Creacion) lista.get(pos)).setClase(clase);
 
                     System.out.println("Asigne el nombre de su personaje");
@@ -61,6 +81,11 @@ public class Lab02_FelipeLin {
 
                     System.out.println("1. Mediano \n2. Enano \n3. Elfo \n4. Humano \nDebera de escribir unos de las razas dependiendo que raza quiere");
                     String raza = leer.nextLine();
+                    while (!raza.contains("mediano") && !raza.contains("enano") && !raza.contains("enano") && !raza.contains("elfo")) {
+                        System.out.println("Solo puede escribir las razas en minuscula o solo puede escribir esas opciones que se le dan");
+                        System.out.println("1. Mediano \n2. Enano \n3. Elfo \n4. Humano \nDebera de escribir unos de las razas dependiendo que raza quiere");
+                        raza = leer.nextLine();
+                    }
                     ((Creacion) lista.get(pos)).setRaza(raza);
 
                     System.out.println("Ingrese estatura del personaje: ");
@@ -82,6 +107,11 @@ public class Lab02_FelipeLin {
 
                     System.out.println("1. Norfair \n2. Brinstar \n3. Maridia \n4. Zebes \n5. Crateria \nDebera de escribir unos de las nacionalidades dependiendo que nacionalidad quiere");
                     String nacionalidad = leer.nextLine();
+                    while (!nacionalidad.contains("norfair") && !nacionalidad.contains("brinstar") && !nacionalidad.contains("maridia") && !nacionalidad.contains("zebes")) {
+                        System.out.println("Solo puede escribir las nacionalidades en minuscula o solo puede escribir esas opciones que se le dan");
+                        System.out.println("1. Norfair \n2. Brinstar \n3. Maridia \n4. Zebes \n5. Crateria \nDebera de escribir unos de las nacionalidades dependiendo que nacionalidad quiere");
+                        nacionalidad = leer.nextLine();
+                    }
                     ((Creacion) lista.get(pos)).setNacionalidad(nacionalidad);
 
                     break;
@@ -103,6 +133,14 @@ public class Lab02_FelipeLin {
                     break;
                 }
                 case 5: {
+
+                    int pos;
+                    System.out.println("Ingrese la posicion de su personaje para jugar");
+                    pos = leer.nextInt();
+                    if (((Creacion) lista.get(pos)).getClase() == "clerigo") {
+
+                    }
+
                     break;
                 }
                 case 6: {

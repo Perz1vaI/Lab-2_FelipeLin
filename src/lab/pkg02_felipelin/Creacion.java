@@ -116,6 +116,136 @@ public class Creacion {
         this.clase = clase;
     }
 
+    public int getHpMediano() {
+        return hpMediano;
+    }
+
+    public void setHpMediano(int hpMediano) {
+        this.hpMediano = hpMediano;
+    }
+
+    public int getHpEnano() {
+        return hpEnano;
+    }
+
+    public void setHpEnano(int hpEnano) {
+        this.hpEnano = hpEnano;
+    }
+
+    public int getHpElfo() {
+        return hpElfo;
+    }
+
+    public void setHpElfo(int hpElfo) {
+        this.hpElfo = hpElfo;
+    }
+
+    public int getHpHumano() {
+        return hpHumano;
+    }
+
+    public void setHpHumano(int hpHumano) {
+        this.hpHumano = hpHumano;
+    }
+
+    public int getCsClerigo() {
+        return csClerigo;
+    }
+
+    public void setCsClerigo(int csClerigo) {
+        this.csClerigo = csClerigo;
+    }
+
+    public int getCsBarbaro() {
+        return csBarbaro;
+    }
+
+    public void setCsBarbaro(int csBarbaro) {
+        this.csBarbaro = csBarbaro;
+    }
+
+    public int getCsMago() {
+        return csMago;
+    }
+
+    public void setCsMago(int csMago) {
+        this.csMago = csMago;
+    }
+
+    public int getCsPicaro() {
+        return csPicaro;
+    }
+
+    public void setCsPicaro(int csPicaro) {
+        this.csPicaro = csPicaro;
+    }
+
+    public int getAcClerigo() {
+        return acClerigo;
+    }
+
+    public void setAcClerigo(int acClerigo) {
+        this.acClerigo = acClerigo;
+    }
+
+    public int getAcBarbaro() {
+        return acBarbaro;
+    }
+
+    public void setAcBarbaro(int acBarbaro) {
+        this.acBarbaro = acBarbaro;
+    }
+
+    public int getAcMago() {
+        return acMago;
+    }
+
+    public void setAcMago(int acMago) {
+        this.acMago = acMago;
+    }
+
+    public int getAcPicaro() {
+        return acPicaro;
+    }
+
+    public void setAcPicaro(int acPicaro) {
+        this.acPicaro = acPicaro;
+    }
+
+    public int getDgClerigo() {
+        return dgClerigo;
+    }
+
+    public void setDgClerigo(int dgClerigo) {
+        this.dgClerigo = dgClerigo;
+    }
+
+    public int getDgBarbaro() {
+        return dgBarbaro;
+    }
+
+    public void setDgBarbaro(int dgBarbaro) {
+        this.dgBarbaro = dgBarbaro;
+    }
+
+    public int getDgMago() {
+        return dgMago;
+    }
+
+    public void setDgMago(int dgMago) {
+        this.dgMago = dgMago;
+    }
+
+    public int getDgPicaro() {
+        return dgPicaro;
+    }
+
+    public void setDgPicaro(int dgPicaro) {
+        this.dgPicaro = dgPicaro;
+    }
+    
+    
+
     @Override
     public String toString() {
         return "" + "clase=" + clase + ", raza=" + raza + ", nombre=" + nombre + ", estatura=" + estatura + ", peso=" + peso + ", edad=" + edad + ", descripcion=" + descripcion + ", Nacionalidad=" + Nacionalidad;
