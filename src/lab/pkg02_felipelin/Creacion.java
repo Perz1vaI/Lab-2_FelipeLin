@@ -116,4 +116,9 @@ public class Creacion {
         this.clase = clase;
     }
 
+    @Override
+    public String toString() {
+        return "" + "clase=" + clase + ", raza=" + raza + ", nombre=" + nombre + ", estatura=" + estatura + ", peso=" + peso + ", edad=" + edad + ", descripcion=" + descripcion + ", Nacionalidad=" + Nacionalidad;
+    }
+
 }
